@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0](https://github.com/rust-mcp-stack/rust-mcp-sdk/compare/rust-mcp-sdk-v0.1.0...rust-mcp-sdk-v0.1.0) (2025-03-29)
+
+
+### Features
+
+* Initial release v0.1.0 ([4c08beb](https://github.com/rust-mcp-stack/rust-mcp-sdk/commit/4c08beb73b102c77e65b724b284008071b7f5ef4))
+
 ## [0.1.7](https://github.com/hashemix/rust-mcp-sdk/compare/rust-mcp-sdk-v0.1.6...rust-mcp-sdk-v0.1.7) (2025-03-24)
 
 
