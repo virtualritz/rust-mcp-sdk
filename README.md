@@ -102,7 +102,7 @@ impl ServerHandler for MyServerHandler {
 
 See hello-world-mcp-server example running in [MCP Inspector](https://modelcontextprotocol.io/docs/tools/inspector) :
 
-![mcp-server in rust](https://github.com/rust-mcp-stack/rust-mcp-sdk/tree/main/assets/examples/hello-world-mcp-server.gif)
+![mcp-server in rust](assets/examples/hello-world-mcp-server.gif)
 
 ---
 
