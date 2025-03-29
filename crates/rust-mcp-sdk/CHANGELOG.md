@@ -1,0 +1,50 @@
+# Changelog
+
+## [0.1.7](https://github.com/hashemix/rust-mcp-sdk/compare/rust-mcp-sdk-v0.1.6...rust-mcp-sdk-v0.1.7) (2025-03-24)
+
+
+### Bug Fixes
+
+* Them all ([2f4990f](https://github.com/hashemix/rust-mcp-sdk/commit/2f4990fbeb9ef5e5b40a7ccb31e9583e318a36ad))
+
+## [0.1.6](https://github.com/hashemix/rust-mcp-sdk/compare/rust-mcp-sdk-v0.1.5...rust-mcp-sdk-v0.1.6) (2025-03-24)
+
+
+### Bug Fixes
+
+* Sdk ([75fded9](https://github.com/hashemix/rust-mcp-sdk/commit/75fded976925cf24c25cdffacab7f31e468c0f08))
+
+## [0.1.5](https://github.com/hashemix/rust-mcp-sdk/compare/rust-mcp-sdk-v0.1.4...rust-mcp-sdk-v0.1.5) (2025-03-24)
+
+
+### Bug Fixes
+
+* Sdk change ([5a4d636](https://github.com/hashemix/rust-mcp-sdk/commit/5a4d63675bf71bf26443453d9f00bf91b49d29d1))
+
+## [0.1.4](https://github.com/hashemix/rust-mcp-sdk/compare/rust-mcp-sdk-v0.1.3...rust-mcp-sdk-v0.1.4) (2025-03-24)
+
+
+### Features
+
+* Initial release ([6f6c8ce](https://github.com/hashemix/rust-mcp-sdk/commit/6f6c8cec8fe1277fc39f4ddce6f17b36129bedee))
+
+## [0.1.3](https://github.com/hashemix/rust-mcp-sdk/compare/v0.1.2...v0.1.3) (2025-03-24)
+
+
+### Features
+
+* Initial release ([6f6c8ce](https://github.com/hashemix/rust-mcp-sdk/commit/6f6c8cec8fe1277fc39f4ddce6f17b36129bedee))
+
+## [0.1.2](https://github.com/hashemix/rust-mcp-sdk/compare/v0.1.1...v0.1.2) (2025-03-24)
+
+
+### Features
+
+* Initial release ([6f6c8ce](https://github.com/hashemix/rust-mcp-sdk/commit/6f6c8cec8fe1277fc39f4ddce6f17b36129bedee))
+
+## [0.1.1](https://github.com/hashemix/rust-mcp-sdk/compare/Rust MCP SDK-v0.1.0...Rust MCP SDK-v0.1.1) (2025-03-24)
+
+
+### Features
+
+* Initial release ([6f6c8ce](https://github.com/hashemix/rust-mcp-sdk/commit/6f6c8cec8fe1277fc39f4ddce6f17b36129bedee))

@@ -1,0 +1,55 @@
+{
+    "$schema": "https://raw.githubusercontent.com/googleapis/release-please/main/schemas/config.json",
+    "release-type": "rust",
+    "release-as": "",
+    "include-component-in-tag": true,
+    "plugins": [
+        "cargo-workspace",
+        "sentence-case"
+    ],
+    "pull-request-header": ":robot: Auto-generated release PR",
+    "packages": {
+        "crates/rust-mcp-macros": {
+            "release-type": "rust",
+            "draft": false,
+            "prerelease": false,
+            "bump-minor-pre-major": true,
+            "bump-patch-for-minor-pre-major": true,
+            "changelogPath": "CHANGELOG.md",
+            "extra-files": [
+                {
+                    "type": "generic",
+                    "path": "CHANGELOG.md"
+                }
+            ]
+        },
+        "crates/rust-mcp-transport": {
+            "release-type": "rust",
+            "draft": false,
+            "prerelease": false,
+            "bump-minor-pre-major": true,
+            "bump-patch-for-minor-pre-major": true,
+            "changelogPath": "CHANGELOG.md",
+            "extra-files": [
+                {
+                    "type": "generic",
+                    "path": "CHANGELOG.md"
+                }
+            ]
+        },
+        "crates/rust-mcp-sdk": {
+            "release-type": "rust",
+            "draft": false,
+            "prerelease": false,
+            "bump-minor-pre-major": true,
+            "bump-patch-for-minor-pre-major": true,
+            "changelogPath": "CHANGELOG.md",
+            "extra-files": [
+                {
+                    "type": "generic",
+                    "path": "CHANGELOG.md"
+                }
+            ]
+        }
+    }
+}
