@@ -117,7 +117,7 @@ impl McpServerHandler for ServerRuntimeInternalHandler<Box<dyn ServerHandler>> {
 
                     rust_mcp_schema::ClientRequest::GetPromptRequest(prompt_request) => self
                         .handler
-                        .handle_prompt_request(prompt_request, runtime)
+                        .handle_get_prompt_request(prompt_request, runtime)
                         .await
                         .map(|value| value.into()),
                     rust_mcp_schema::ClientRequest::ListToolsRequest(list_tools_request) => self

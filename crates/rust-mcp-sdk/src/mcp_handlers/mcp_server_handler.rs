@@ -151,7 +151,7 @@ pub trait ServerHandler: Send + Sync + 'static {
     ///
     /// Default implementation returns method not found error.
     /// Customize this function in your specific handler to implement behavior tailored to your MCP server's capabilities and requirements.
-    async fn handle_prompt_request(
+    async fn handle_get_prompt_request(
         &self,
         request: GetPromptRequest,
         runtime: &dyn McpServer,
