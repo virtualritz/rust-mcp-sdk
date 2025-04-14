@@ -6,7 +6,7 @@ use rust_mcp_schema::{
         MessageFromClient, NotificationFromServer, RequestFromServer, ResultFromClient,
         ServerMessage,
     },
-    InitializeRequestParams, JsonrpcErrorError,
+    InitializeRequestParams, RpcError,
 };
 use rust_mcp_transport::Transport;
 
@@ -67,7 +67,7 @@ impl McpClientHandler for ClientCoreInternalHandler<Box<dyn ClientHandlerCore>> 
         &self,
         server_jsonrpc_request: RequestFromServer,
         runtime: &dyn McpClient,
-    ) -> std::result::Result<ResultFromClient, JsonrpcErrorError> {
+    ) -> std::result::Result<ResultFromClient, RpcError> {
         // handle request and get the result
         self.handler
             .handle_request(server_jsonrpc_request, runtime)
@@ -76,7 +76,7 @@ impl McpClientHandler for ClientCoreInternalHandler<Box<dyn ClientHandlerCore>> 
 
     async fn handle_error(
         &self,
-        jsonrpc_error: JsonrpcErrorError,
+        jsonrpc_error: RpcError,
         runtime: &dyn McpClient,
     ) -> SdkResult<()> {
         self.handler.handle_error(jsonrpc_error, runtime).await?;

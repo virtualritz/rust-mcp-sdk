@@ -4,6 +4,13 @@
 
 # Rust MCP SDK
 
+[<img alt="crates.io" src="https://img.shields.io/crates/v/rust-mcp-sdk?style=for-the-badge&logo=rust&color=FE965D" height="22">](https://crates.io/crates/rust-mcp-sdk)
+[<img alt="docs.rs" src="https://img.shields.io/badge/docs.rs-rust_mcp_SDK-0ECDAB?style=for-the-badge&logo=docs.rs" height="22">](https://docs.rs/rust-mcp-sdk)
+[<img alt="build status" src="https://img.shields.io/github/actions/workflow/status/rust-mcp-stack/rust-mcp-sdk/ci.yml?style=for-the-badge" height="22">
+](https://github.com/rust-mcp-stack/rust-mcp-sdk/actions/workflows/ci.yml)
+[<img alt="Hello World MCP Server" src="https://img.shields.io/badge/Example-Hello%20World%20MCP-0286ba?style=for-the-badge&logo=rust" height="22">
+](examples/hello-world-mcp-server)
+
 A high-performance, asynchronous toolkit for building MCP servers and clients.  
 Focus on your app's logic while **rust-mcp-sdk** takes care of the rest!
 
@@ -70,7 +77,7 @@ pub struct MyServerHandler;
 #[async_trait]
 impl ServerHandler for MyServerHandler {
     // Handle ListToolsRequest, return list of available tools as ListToolsResult
-    async fn handle_list_tools_request(&self, request: ListToolsRequest, runtime: &dyn MCPServer) -> Result<ListToolsResult, JsonrpcErrorError> {
+    async fn handle_list_tools_request(&self, request: ListToolsRequest, runtime: &dyn MCPServer) -> Result<ListToolsResult, RpcError> {
 
         Ok(ListToolsResult {
             tools: vec![SayHelloTool::get_tool()],
@@ -212,6 +219,21 @@ If you are looking for a step-by-step tutorial on how to get started with `rust-
 The same principles outlined above apply to the client-side handlers, `mcp_client_handler` and `mcp_client_handler_core`.  
 Use `client_runtime::create_client()` or `client_runtime_core::create_client()` , respectively.  
 Check out the corresponding examples at: [examples/simple-mcp-client](https://github.com/rust-mcp-stack/rust-mcp-sdk/tree/main/examples/simple-mcp-client) and [examples/simple-mcp-client-core](https://github.com/rust-mcp-stack/rust-mcp-sdk/tree/main/examples/simple-mcp-client-core).
+
+## Contributing
+
+We welcome everyone who wishes to contribute! Please refer to the [contributing](CONTRIBUTING.md) guidelines for more details.
+
+Check out our [development guide](development.md) for instructions on setting up, building, testing, formatting, and trying out example projects.
+
+All contributions, including issues and pull requests, must follow
+Rust's Code of Conduct.
+
+Unless explicitly stated otherwise, any contribution you submit for inclusion in rust-mcp-sdk is provided under the terms of the MIT License, without any additional conditions or restrictions.
+
+## Development
+
+Check out our [development guide](development.md) for instructions on setting up, building, testing, formatting, and trying out example projects.
 
 ## License
 

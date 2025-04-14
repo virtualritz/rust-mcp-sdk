@@ -4,7 +4,7 @@ use rust_mcp_schema::{
         NotificationFromClient, NotificationFromServer, RequestFromClient, RequestFromServer,
         ResultFromClient, ResultFromServer,
     },
-    JsonrpcErrorError,
+    RpcError,
 };
 
 use crate::error::SdkResult;
@@ -18,12 +18,9 @@ pub trait McpServerHandler: Send + Sync {
         &self,
         client_jsonrpc_request: RequestFromClient,
         runtime: &dyn McpServer,
-    ) -> std::result::Result<ResultFromServer, JsonrpcErrorError>;
-    async fn handle_error(
-        &self,
-        jsonrpc_error: JsonrpcErrorError,
-        runtime: &dyn McpServer,
-    ) -> SdkResult<()>;
+    ) -> std::result::Result<ResultFromServer, RpcError>;
+    async fn handle_error(&self, jsonrpc_error: RpcError, runtime: &dyn McpServer)
+        -> SdkResult<()>;
     async fn handle_notification(
         &self,
         client_jsonrpc_notification: NotificationFromClient,
@@ -37,12 +34,9 @@ pub trait McpClientHandler: Send + Sync {
         &self,
         server_jsonrpc_request: RequestFromServer,
         runtime: &dyn McpClient,
-    ) -> std::result::Result<ResultFromClient, JsonrpcErrorError>;
-    async fn handle_error(
-        &self,
-        jsonrpc_error: JsonrpcErrorError,
-        runtime: &dyn McpClient,
-    ) -> SdkResult<()>;
+    ) -> std::result::Result<ResultFromClient, RpcError>;
+    async fn handle_error(&self, jsonrpc_error: RpcError, runtime: &dyn McpClient)
+        -> SdkResult<()>;
     async fn handle_notification(
         &self,
         server_jsonrpc_notification: NotificationFromServer,
